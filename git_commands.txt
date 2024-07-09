@@ -1,0 +1,23 @@
+1. git clone <url>
+-> download rep to your computer
+2. git add <filename> / git add . (adding all of the files)
+-> keep tracking the files
+3. git commit -m "message" / git commit -am "message" (commiting all the files)
+-> commiting the changes we've made. taking snapshot of our codes current state
+4. git status
+-> Show us the status of the current changes
+5. git pull
+-> If your remote rep is more uptodate and you want pull those codes
+6. git log
+-> Gives history of all your commits
+7. git reset --hard <commit_hash>
+-> reverts your code to that specified commit_hash
+8. git reset --hard origin/master
+-> revets your code to currently stored in github
+9. git checkout -b <new_branchname>
+-> creating new new_branch
+10. git checkout <branchname>
+-> switching to a branch
+11. git merge <other_brachname>
+-> merging to braches
+
