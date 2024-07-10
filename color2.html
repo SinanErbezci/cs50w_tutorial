@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Changing CSS</title>
+    </head>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            document.querySelector('select').onchange = function () {
+                document.querySelector('#hello').style.color = this.value;
+                // "this". Refers to the thing that received the event. In this case
+                // it is dropdown menu.
+            }
+        });
+
+    </script>
+    <body>
+        <h1 id="hello">Hello!</h1>
+        <select>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="black">Black</option>
+        </select>
+    </body>
+</html>

@@ -4,12 +4,13 @@
         <title>Changing CSS</title>
     </head>
     <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
+        // => is another way to create function. if there is no input than () =>
+        // if there is an input then, it is (input) =>
+        document.addEventListener("DOMContentLoaded", () => {
             //returns array of all the elements
             // we need to loop through elements of this array. One way of doing
             // is that you can use forEach. You give a give function and it applied to all the elements.
-            document.querySelectorAll('button').forEach(function (button) {
+            document.querySelectorAll('button').forEach((button) => {
                 button.onclick = function () {
                     document.querySelector('#hello').style.color = button.dataset.color;
                 }

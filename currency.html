@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Currency</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                // fetch. Makes web request and gets response. Promise. It can take time(async)
+                fetch('https://api.exchangeratesapi.io/latest?base=USD')
+                .then(response => response.json()) // one line function desc
+                // ".then" what you gonna do after you get the response
+                .then(data => {
+                    const rate = data.error.info;
+                    document.querySelector('h2').innerHTML = rate; 
+                })
+                .catch( error => {
+                console.log('Error:', error);
+            });
+
+            })
+            // if anything goes bad you can catch error case
+          
+        </script>
+    </head>
+    <body>
+        <h1>Error Message</h1>
+        <h2></h2>
+    </body>
+</html>
