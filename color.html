@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Changing CSS</title>
+    </head>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            //returns array of all the elements
+            // we need to loop through elements of this array. One way of doing
+            // is that you can use forEach. You give a give function and it applied to all the elements.
+            document.querySelectorAll('button').forEach(function (button) {
+                button.onclick = function () {
+                    document.querySelector('#hello').style.color = button.dataset.color;
+                }
+            })
+
+        });
+
+        // html "data" attribute. Used for putting additional info for that element. 
+        // data-<blabla>
+    </script>
+    <body>
+        <h1 id="hello">Hello!</h1>
+        <button data-color="red">Red</button>
+        <button data-color="green">Green</button>
+        <button data-color="blue">Blue</button>
+    </body>
+</html>
